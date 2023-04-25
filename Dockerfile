@@ -1,6 +1,6 @@
-FROM centos:7
+FROM ubuntu:latest
 MAINTAINER arbazmtn@gmail.com
-RUN yum install -y httpd \
+RUN apt install -y httpd \
   zip \
  unzip
  ADD https://www.free-css.com/assets/files/free-css-templates/download/page286/coto.zip  /var/www/html/
