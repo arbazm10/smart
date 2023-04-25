@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:latest
 MAINTAINER arbazmtn@gmail.com
 RUN yum install -y httpd \
   zip \
@@ -8,7 +8,7 @@ RUN yum install -y httpd \
  RUN unzip coto.zip
  RUN cp -rvf html/* .
  RUN rm -rf html  coto.zip
- CMD ["/usr/bin/httpd", "-D",   "FOREGROUND"]
+ CMD ["/usr/sbin/httpd", "-D",   "FOREGROUND"]
  EXPOSE 80
 
 
