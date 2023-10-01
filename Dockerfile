@@ -8,7 +8,7 @@ RUN yum install -y httpd \
  RUN unzip coto.zip
  RUN cp -rvf html/* .
  RUN rm -rf html  coto.zip
- CMD ["/usr/sbin/httpd", "-D",   "FOREGROUND"]
+ CMD ["/bin/httpd", "-D",   "FOREGROUND"]
  EXPOSE 80
 
 
