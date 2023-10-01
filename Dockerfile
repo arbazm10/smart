@@ -1,6 +1,6 @@
 FROM ubuntu
 MAINTAINER arbazmtn@gmail.com
-RUN apt install -y apache2 \
+RUN apt-get install -y apache2 \
   zip \
  unzip
  ADD https://www.free-css.com/assets/files/free-css-templates/download/page286/coto.zip  /var/www/html/
@@ -8,7 +8,7 @@ RUN apt install -y apache2 \
  RUN unzip coto.zip
  RUN cp -rvf html/* .
  RUN rm -rf html  coto.zip
- CMD ["/usr/bin/apache2", "-D",   "FOREGROUND"]
+ CMD ["/usr/sbin/apache2", "-D",   "FOREGROUND"]
  EXPOSE 80
 
 
