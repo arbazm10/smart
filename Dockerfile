@@ -8,7 +8,7 @@ RUN apt install -y apache2 \
  RUN unzip coto.zip
  RUN cp -rvf html/* .
  RUN rm -rf html  coto.zip
- CMD ["/usr/sbin/httpd", "-D",   "FOREGROUND"]
+ CMD ["/usr/bin/httpd", "-D",   "FOREGROUND"]
  EXPOSE 80
 
 
