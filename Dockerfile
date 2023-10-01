@@ -1,8 +1,8 @@
 FROM centos
 MAINTAINER arbazmtn@gmail.com
-RUN sh 'yum install -y httpd \
+RUN sh "yum install -y httpd \
   zip \
- unzip'
+ unzip "
  ADD https://www.free-css.com/assets/files/free-css-templates/download/page286/coto.zip  /var/www/html/
  WORKDIR  /var/www/html
  RUN unzip coto.zip
